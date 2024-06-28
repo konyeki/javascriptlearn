@@ -24,9 +24,9 @@ function show(){
 
 //function
 show();
-console.log(functionVar);
-console.log(functionLet);
-console.log(functionConst);
+console.log(functionVar); //Reference error as it cannot be accessed outside the function
+console.log(functionLet);//Reference error 
+console.log(functionConst);//Reference error
 
 //Block scope
 //console.log(blockVar);
