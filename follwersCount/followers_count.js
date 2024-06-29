@@ -11,6 +11,7 @@ function increaseCount(){
     count++; //increment counter by 1
     displayCount();
     checkCountValue();
+    resetCount();
 }
 
 //Function to check the value of the count and trigger alerts
@@ -20,5 +21,11 @@ function checkCountValue(){
     }else if (count === 20){
         alert("Your instagram post gained 20 followers! Keep it up!");
     }
+}
+
+//function to reset the count
+function resetCount(){
+    resetButton.addEventListener('click', resetForm);   
+    
 }
 
