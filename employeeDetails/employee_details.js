@@ -13,3 +13,11 @@ function calculateTotalSalaries(){
     const totalSalaries = employees.reduce((acc, employee)=>acc + employee.salary, 0);
     alert(`Total Salaries: $${totalSalaries}`);
 }
+
+//Function to display employees details based on department such as HR department
+
+function displayHREmployees(){
+    const hrEmployees = employees.filter(employee => employee.department === "HR");
+    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - Ksh${employee.salary}</p>`);
+    document.getElementById(employeesDetails).innerHTML = hrEmployees;
+}
