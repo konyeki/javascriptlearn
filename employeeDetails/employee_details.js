@@ -5,8 +5,8 @@ const employees = [
 ];
 
 function displayEmployees(){
-    const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join(' ');
-    document.getElementById(employeesDetails).innerHTML = totalEmployees;
+    const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - $${employee.salary}</p>`).join(' ');
+    document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
 
 function calculateTotalSalaries(){
@@ -18,8 +18,8 @@ function calculateTotalSalaries(){
 
 function displayHREmployees(){
     const hrEmployees = employees.filter(employee => employee.department === "HR");
-    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - Ksh${employee.salary}</p>`);
-    document.getElementById(employeesDetails).innerHTML = hrEmployees;
+    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - Ksh${employee.salary}</p>`);
+    document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
 
 
@@ -28,9 +28,9 @@ function displayHREmployees(){
 function findEmployeeById(employeeId){
     const foundEmployee = employees.find(employee => employee.id === employeeId);
     if(foundEmployee){
-        document.getElementById(employeesDetails).innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+        document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
     } else {
-        document.getElementById(employeesDetails).innerHTML = "No employee has been found with that ID!";
+        document.getElementById('employeesDetails').innerHTML = "No employee has been found with that ID!";
 
     }
 }
