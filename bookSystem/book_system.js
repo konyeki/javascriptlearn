@@ -5,7 +5,7 @@ function addBook(){
     const bookName = document.getElementById('bookName').value;
     const authorName = document.getElementById('authorName').value;
     const bookDescription = document.getElementById('bookDescription').value;
-    const pagesNumber = document.getElementById('pagesNumber');
+    const pagesNumber = parseInt(document.getElementById('pagesNumber').value);
 
     //Let us add the logic to add the book 
     //using the push method of array
