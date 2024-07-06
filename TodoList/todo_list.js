@@ -28,7 +28,7 @@ function displayTasks(){
 }
 
 function toggleTask(index){
-    tasks[index].completed = !task[index].completed;
+    tasks[index].completed = !tasks[index].completed;
     displayTasks();
 }
 
